@@ -3,18 +3,6 @@
 - writer : yoon
 - created : 2018. 05
 
-**TensorFlow** is an open source software library for numerical computation using
-data flow graphs.  The graph nodes represent mathematical operations, while
-the graph edges represent the multidimensional data arrays (tensors) that flow
-between them.  This flexible architecture lets you deploy computation to one
-or more CPUs or GPUs in a desktop, server, or mobile device without rewriting
-code.  TensorFlow also includes TensorBoard, a data visualization toolkit.
+**머신 러닝에 사용되는 기본적인 알고리즘, 수학적 내용들을 파이썬으로 구현한 내용들을 정리한 repository 입니다. 개인적 스터디의 목적으로 사용되고 있습니다.
 
-TensorFlow was originally developed by researchers and engineers
-working on the Google Brain team within Google's Machine Intelligence Research
-organization for the purposes of conducting machine learning and deep neural
-networks research.  The system is general enough to be applicable in a wide
-variety of other domains, as well.
-
-**If you want to contribute to TensorFlow, be sure to review the [contribution
-guidelines](CONTRIBUTING.md).**
+**If you want to contribute to this repository, send me an e-mail! [yoonkt200@gmail.com]**
