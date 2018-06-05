@@ -15,17 +15,22 @@ output = [68.77,51.25,52.08,38.36,44.54,57.13,51.4,41.42,31.22,34.76,54.01,38.79
 y_data = np.array(output)
 
 '''
-명시적으로 해를 구하는 방법
-y = βX+ϵ 의 선형 회귀를 한다고 할 때,
-β = ( X^(T) * X )^(-1) * X^(T) * y의 수식으로 명시적인 해를 구할 수 있음.
+
+- 명시적으로 해를 구하는 방법
+  y = βX+ϵ 의 선형 회귀를 한다고 할 때,
+  β = ( X^(T) * X )^(-1) * X^(T) * y의 수식으로 명시적인 해를 구할 수 있음.
+
 '''
+
 def explicit_linear_regression_solution(y_data=y_data, x_data=x_data):
     coeffs = inv(x_data.transpose().dot(x_data)).dot(x_data.transpose()).dot(y_data)
     print(coeffs)
 
 
 '''
-GD를 이용하여 해를 근사적으로 추정
+
+- GD를 이용하여 해를 근사적으로 추정
+
 '''
 class GradientDescent():
     def __init__(self, learning_rate=0.01, threshold=0.01, max_iterations=1000):
