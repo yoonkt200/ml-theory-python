@@ -5,6 +5,7 @@
 
 **If you want to contribute to this repository, send me an e-mail, yoonkt200@gmail.com**
 
-## Contents
-- Regression Implementation
+## Implementation Contents
+- Regression
+- Logistic Regression
 - More..
