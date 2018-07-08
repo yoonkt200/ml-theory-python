@@ -29,7 +29,7 @@ class SoftmaxRegression:
         softmax /= softmax.sum(axis=1).reshape([-1, 1])
         return softmax
 
-        # result example
+        # prediction result example
         # [[0.01821127 0.24519181 0.73659691]
         # [0.87279747 0.0791784  0.04802413]
         # [0.05280815 0.86841135 0.0787805 ]]
