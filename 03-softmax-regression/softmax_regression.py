@@ -46,20 +46,24 @@ class SoftmaxRegression:
         return cost
 
     # gradient 계산 (regularized)
-    def gradient_func(self, softmax, x_data, y_data):
-        sample_size = y.shape[0]
+    def gradient_func(self, y_pred, x_data, y_data):
+        sample_size = y_data.shape[0]
 
-        # softmax cost function의 미분 결과는 pi−yi 이므로,
+        # softmax cost function의 미분 결과는 pi−yi. -> dy에 input값을 내적
+
         # softmax가 계산된 matrix에서, (해당 one-hot 의 class index * 해당 유닛)에 해당하는 유닛 위치에 -1을 더해줌.
-        softmax[np.arange(len(softmax)), np.argmax(y_data, axis=1)] -= 1
-        gradient = np.dot(x_data.transpose(), softmax) / sample_size
+        # softmax[np.arange(len(softmax)), np.argmax(y_data, axis=1)] -= 1
+        # gradient = np.dot(x_data.transpose(), softmax) / sample_size
+
+        dy = (y_pred - y_data) / sample_size
+        gradient = np.dot(x_data.transpose(), dy)
         gradient += self._reg_strength * self._W
         return gradient
 
     # learning
     def fit(self, x_data, y_data):
         num_examples, num_features = np.shape(x_data)
-        num_classes = y.shape[1]
+        num_classes = y_data.shape[1]
 
         # 가중계수 초기화
         self._W = np.random.randn(num_features, num_classes) / np.sqrt(num_features / 2)
@@ -106,9 +110,12 @@ if __name__ == "__main__":
     # training score
     pred = model.predict(X)
     num = np.unique(pred, axis=0)
+    print(num)
     num = num.shape[0]
+    print(num)
+
     pred = np.eye(num)[pred].astype(int)
-    
+
     acc = 0
     for idx in range(len(y)):
         if (y[idx] == pred[idx]).all():
