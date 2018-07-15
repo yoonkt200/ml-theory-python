@@ -7,6 +7,7 @@ from sklearn import datasets
 - GD를 이용하여 Logistic regression 학습
 
 '''
+
 class LogisticRegression:
     def __init__(self, learning_rate=0.01, threshold=0.01, max_iterations=100000, fit_intercept=True, verbose=False):
         self._learning_rate = learning_rate  # 학습 계수
