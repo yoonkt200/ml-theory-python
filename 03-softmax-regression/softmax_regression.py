@@ -110,9 +110,7 @@ if __name__ == "__main__":
     # training score
     pred = model.predict(X)
     num = np.unique(pred, axis=0)
-    print(num)
     num = num.shape[0]
-    print(num)
 
     pred = np.eye(num)[pred].astype(int)
 

@@ -23,6 +23,8 @@ def softmax(x_data):
 
 # cost function
 def cross_entropy(z, y_data, reg_strength, W):
+    print(z.shape)
+    print(y_data.shape)
     sample_size = y_data.shape[0]
     cost = -np.log(z[np.arange(len(z)), np.argmax(y_data, axis=1)]).sum()
     cost /= sample_size
@@ -116,40 +118,37 @@ class ANN:
         for i in range(self._max_iterations):
             z = np.dot(x_data, self._params['W0']) + self._params['b0']
             z = relu(z)
-
             # feed forward
             for j in range(1, self._hidden_layer_depth + 1):
-
                 # 마지막 activation : softmax
                 if j == self._hidden_layer_depth:
                     z = np.dot(z, self._params['W' + str(j)]) + self._params['b' + str(j)]
                     z = softmax(z)
-
                 # 레이어간 activation : relu
                 else:
                     z = np.dot(z, self._params['W' + str(j)]) + self._params['b' + str(j)]
                     z = relu(z)
 
-            # 최종 cost
+            # # 최종 cost
             cost = cross_entropy(z, y_data, self._reg_strength, self._params['W1'])
 
-            # 각 레이어별 local gradient
-            grad = self.gradient(x_data, z, y_data)
-
-            # 레이어별 local gradient를 이용하여 레이어별 계수 업데이트
-            for j in range(1, self._hidden_layer_depth + 1):
-                W_key = 'W' + str(j)
-                b_key = 'b' + str(j)
-                self._params[W_key] -= self._learning_rate * grad[W_key]
-                self._params[b_key] -= self._learning_rate * grad[b_key]
-
-            # 판정 임계값에 다다르면 학습 중단
-            if cost < self._threshold:
-                return False
-
-            # 100 iter 마다 cost 출력
-            if (self._verbose == True and i % 100 == 0):
-                print ("Iter(Epoch): %s, Loss: %s" % (i, cost))
+            # # 각 레이어별 local gradient
+            # grad = self.gradient(x_data, z, y_data)
+            #
+            # # 레이어별 local gradient를 이용하여 레이어별 계수 업데이트
+            # for j in range(1, self._hidden_layer_depth + 1):
+            #     W_key = 'W' + str(j)
+            #     b_key = 'b' + str(j)
+            #     self._params[W_key] -= self._learning_rate * grad[W_key]
+            #     self._params[b_key] -= self._learning_rate * grad[b_key]
+            #
+            # # 판정 임계값에 다다르면 학습 중단
+            # if cost < self._threshold:
+            #     return False
+            #
+            # # 100 iter 마다 cost 출력
+            # if (self._verbose == True and i % 100 == 0):
+            #     print ("Iter(Epoch): %s, Loss: %s" % (i, cost))
 
     # predict
     def predict(self, x_data):
@@ -195,9 +194,9 @@ if __name__ == "__main__":
     y_train = np_utils.to_categorical(y_train)
     y = y_train[:100, :]
 
-    ann = ANN(learning_rate=0.001, threshold=0.01, max_iterations=2000, verbose=True, reg_strength=1e-8, hidden_layer_depth=1)
-    ann.add_hidden_layer(1, 4, 10)
-    # ann.fit(X, y)
+    ann = ANN(learning_rate=0.001, threshold=0.01, max_iterations=1, verbose=True, reg_strength=1e-8, hidden_layer_depth=1)
+    ann.add_hidden_layer(1, 20, 10)
+    ann.fit(X, y)
 
     # training score
     # pred = ann.predict(X)
