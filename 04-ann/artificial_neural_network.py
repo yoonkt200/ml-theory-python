@@ -197,18 +197,18 @@ if __name__ == "__main__":
 
     ann = ANN(learning_rate=0.001, threshold=0.01, max_iterations=2000, verbose=True, reg_strength=1e-8, hidden_layer_depth=1)
     ann.add_hidden_layer(1, 4, 10)
-    ann.fit(X, y)
+    # ann.fit(X, y)
 
     # training score
-    pred = ann.predict(X)
-    num = 3
-    pred = np.eye(num)[pred].astype(int)
-
-    acc = 0
-    for idx in range(len(y)):
-        if (y[idx] == pred[idx]).all():
-            acc += 1
-
-    print('acc :', str(acc / len(y)))
+    # pred = ann.predict(X)
+    # num = 3
+    # pred = np.eye(num)[pred].astype(int)
+    #
+    # acc = 0
+    # for idx in range(len(y)):
+    #     if (y[idx] == pred[idx]).all():
+    #         acc += 1
+    #
+    # print('acc :', str(acc / len(y)))
 
 
