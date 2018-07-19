@@ -202,7 +202,7 @@ if __name__ == "__main__":
     y_train = np_utils.to_categorical(y_train)
     y = y_train[:, :]
 
-    ann = ANN(learning_rate=0.01, threshold=0.01, max_iterations=5000, verbose=True, reg_strength=1e-8, hidden_layer_depth=1)
+    ann = ANN(learning_rate=0.05, threshold=0.01, max_iterations=10000, verbose=True, reg_strength=1e-8, hidden_layer_depth=1)
     ann.add_hidden_layer(1, 20, 10)
     ann.fit(X, y)
 
