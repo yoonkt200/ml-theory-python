@@ -3,7 +3,6 @@
 - writer : yoon
 - created : 2018. 05
 
-**If you want to contribute to this repository, send me an e-mail, yoonkt200@gmail.com**
 
 ## Implementation Contents
 - Regression
