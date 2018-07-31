@@ -5,6 +5,16 @@
 
 
 ## Implementation Contents
-- Regression
+
+##### Regression
+- Linear Regression
 - Logistic Regression
-- More..
+- Softmax Regression
+
+##### Neural Networks
+- ANN
+
+##### Matrix Factorization
+- banila-MF
+
+...
