@@ -11,7 +11,6 @@ class MatrixFactorization():
         :param epochs: training epochs
         :param verbose: print status
         """
-
         self._R = R
         self._num_users, self._num_items = R.shape
         self._k = k
@@ -83,7 +82,6 @@ class MatrixFactorization():
         :param j: item index
         :return: gradient of latent feature tuple
         """
-
         dp = (error * self._Q[j, :]) - (self._reg_param * self._P[i, :])
         dq = (error * self._P[i, :]) - (self._reg_param * self._Q[j, :])
         return dp, dq
@@ -139,7 +137,6 @@ class MatrixFactorization():
         """
         print fit results
         """
-
         print("User Latent P:")
         print(self._P)
         print("Item Latent Q:")
