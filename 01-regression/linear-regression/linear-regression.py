@@ -51,7 +51,7 @@ class GradientDescent():
             # diff를 이용하여 cost 생성 : 오차의 제곱합 / 2 * 데이터 개수
             cost = np.sum(diff ** 2) / (2 * num_examples)
 
-            # cost 함수의 편미분 : transposed X * cost / n
+            # cost 함수의 편미분 : transposed X * diff / n
             gradient = np.dot(x_data_transposed, diff) / num_examples
 
             # W벡터 업데이트
