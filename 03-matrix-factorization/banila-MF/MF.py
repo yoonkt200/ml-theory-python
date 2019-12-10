@@ -70,7 +70,7 @@ class MatrixFactorization():
         cost = 0
         for x, y in zip(xi, yi):
             cost += pow(self._R[x, y] - predicted[x, y], 2)
-        return np.sqrt(cost) / len(xi)
+        return np.sqrt(cost/len(xi))
 
 
     def gradient(self, error, i, j):
