@@ -21,8 +21,7 @@ The reason for the existence of each chapter is for study only.
 ```bash
 $ git clone https://github.com/yoonkt200/ml-theory-python.git
 $ (conda env) pip install -r requirements.txt
-$ cd ml-theory-python/{chapter-name}/{algorithm-name}/
-$ python main.py
+$ run ml-theory-python/{chapter-name}/{algorithm-name.py or .ipynb}/
 ```
 
 <br/>
