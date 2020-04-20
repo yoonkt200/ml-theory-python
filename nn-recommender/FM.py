@@ -3,7 +3,6 @@
 # Apache License 2.0
 # =============================================================================
 
-import time
 import numpy as np
 from sklearn.metrics import roc_auc_score
 
