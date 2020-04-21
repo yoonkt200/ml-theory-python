@@ -12,6 +12,7 @@ class OLS():
         self._y_data = y_data
 
     def fit(self):
+        # exactly same as MLE (when y has normal distribution)
         self._coefficients = np.linalg.inv(self._x_data.transpose().dot(self._x_data)).dot(self._x_data.transpose()).dot(self._y_data)
         y_hat = np.sum(self._x_data * self._coefficients, axis=1)
         mse = np.mean(np.square(self._y_data - y_hat))
