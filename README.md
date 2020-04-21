@@ -9,10 +9,27 @@ The reason for the existence of each chapter is for study only.
 
 #### Table of Contents
 
-##### 1. Statistics
-* [Pending..](https://github.com/yoonkt200/recommender-system/tree/master/implicit/SVD/main.py)
+* [1. Statistics](https://github.com/yoonkt200/recommender-system/tree/master/01-statistics)
+    - probability
+    - distribution
+    - **pending..**
+* [2. Regression](https://github.com/yoonkt200/recommender-system/tree/master/02-regression)
+    - linear regression
+        - Ordinary Least Square
+        - Maximum Likelihood Estimator 
+        - Gradient Descent
+    - logistic regression
+        - Optimizer (SGD, Adagrad...)
+        - FTRL
+        - **pending..**
+    - softmax regression
+        - **pending..**
+    - regularization
 
-...
+* [N. Recommender](https://github.com/yoonkt200/recommender-system/tree/master/nn-recommender)
+    - Factorization Machine
+    - Factorization Machine vector analysis
+    - **pending..**
 
 
 <br/>
