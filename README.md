@@ -19,7 +19,7 @@ The reason for the existence of each chapter is for study only.
         - Maximum Likelihood Estimator 
         - Gradient Descent
     - logistic regression
-        - Optimizer (SGD, Adagrad...)
+        - Gradient Descent with MLE
         - FTRL
         - **pending..**
     - softmax regression
