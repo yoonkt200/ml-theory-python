@@ -12,6 +12,9 @@ The reason for the existence of each chapter is for study only.
 * [1. Statistics](https://github.com/yoonkt200/recommender-system/tree/master/01-statistics)
     - probability
     - distribution
+    - estimation
+    - testing
+    - bayesian statistics
     - **pending..**
 * [2. Regression](https://github.com/yoonkt200/recommender-system/tree/master/02-regression)
     - linear regression
@@ -21,14 +24,20 @@ The reason for the existence of each chapter is for study only.
     - logistic regression
         - Gradient Descent with MLE
         - FTRL
-        - **pending..**
     - softmax regression
-        - **pending..**
     - regularization
-
-* [N. Recommender](https://github.com/yoonkt200/recommender-system/tree/master/nn-recommender)
+* [3. Linear Algebra](https://github.com/yoonkt200/recommender-system/tree/master/03-linear-algebra)
+    - **pending..**
+* [4. Neural Network](https://github.com/yoonkt200/recommender-system/tree/master/04-neural-network)
+    - Pytorch Examples
+        - basic
+        - regression
+        - fnn
+    - **pending..**
+* [5. Recommender](https://github.com/yoonkt200/recommender-system/tree/master/05-recommender)
     - Factorization Machine
     - Factorization Machine vector analysis
+    - Wide and Deep
     - **pending..**
 
 

@@ -102,8 +102,8 @@ def check_early_stop(check_list, early_stop_window):
 
 def train(input_dim, num_class, epoch, early_stop_window):
     # model, dataset define
-    data_transformer = LibsvmTransformer(train_path='../../dataset/train.txt',
-                                         valid_path='../../dataset/test.txt',
+    data_transformer = LibsvmTransformer(train_path='../dataset/train.txt',
+                                         valid_path='../dataset/test.txt',
                                          input_dim=input_dim,
                                          batch_size=128)
     model = WideAndDeep(input_dim, num_class)
