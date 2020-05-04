@@ -108,7 +108,7 @@ def train(input_dim, num_class, epoch, early_stop_window):
                                          batch_size=128)
     model = WideAndDeep(input_dim, num_class)
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adagrad(model.parameters())
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
     x_valid, y_valid = data_transformer.get_valid_batch()
     valid_inputs = torch.from_numpy(x_valid)
     valid_targets = torch.from_numpy(y_valid)
@@ -130,7 +130,7 @@ def train(input_dim, num_class, epoch, early_stop_window):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            train_auc = roc_auc_score(targets.detach().numpy(), outputs.detach().numpy()[:,1])
+            train_auc = roc_auc_score(targets.detach().numpy(), outputs.detach().numpy()[:, 1])
 
             # validation
             valid_outputs = model(wide_input=valid_inputs, deep_input=valid_inputs)
