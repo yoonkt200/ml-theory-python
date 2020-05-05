@@ -23,7 +23,6 @@ The reason for the existence of each chapter is for study only.
         - Gradient Descent
     - logistic regression
         - Gradient Descent with MLE
-        - FTRL
     - softmax regression
     - optimizer
     - regularization
