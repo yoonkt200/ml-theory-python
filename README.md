@@ -18,11 +18,7 @@ The reason for the existence of each chapter is for study only.
     - entropy
 * [2. Regression](https://github.com/yoonkt200/recommender-system/tree/master/02-regression)
     - linear regression
-        - Ordinary Least Square
-        - Maximum Likelihood Estimator 
-        - Gradient Descent
     - logistic regression
-        - Gradient Descent with MLE
     - optimizer
     - regularization
 * [3. Linear Algebra](https://github.com/yoonkt200/recommender-system/tree/master/03-linear-algebra)
