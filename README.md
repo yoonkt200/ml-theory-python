@@ -16,13 +16,15 @@ The reason for the existence of each chapter is for study only.
     - testing
     - bayesian statistics
     - entropy
+    - time series
 * [2. Regression](https://github.com/yoonkt200/recommender-system/tree/master/02-regression)
     - linear regression
     - logistic regression
     - optimizer
     - regularization
 * [3. Linear Algebra](https://github.com/yoonkt200/recommender-system/tree/master/03-linear-algebra)
-    - **pending..**
+    - dimensionality reduction
+    - matrix factorization
 * [4. Neural Network](https://github.com/yoonkt200/recommender-system/tree/master/04-neural-network)
     - Pytorch Examples
         - basic
