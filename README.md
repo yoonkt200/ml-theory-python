@@ -37,6 +37,8 @@ The reason for the existence of each chapter is for study only.
     - Factorization Machine vector analysis
     - Wide and Deep
     - **pending..**
+* [6. Clustering](https://github.com/yoonkt200/recommender-system/tree/master/06-clustering)
+    - **pending..**
 
 
 <br/>
