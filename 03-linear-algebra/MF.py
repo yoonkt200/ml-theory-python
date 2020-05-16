@@ -18,13 +18,9 @@ class MatrixFactorization():
         self._reg_param = reg_param
         self._epochs = epochs
         self._verbose = verbose
+        self._init_vectors()
 
-    def fit(self):
-        """
-        training Matrix Factorization : Update matrix latent weight and bias
-        - global bias: mean rating value of R(train). It prevent minus output of rating prediction.
-        :return: training_process
-        """
+    def _init_vectors(self):
         # init latent features
         self._P = np.random.normal(size=(self._num_users, self._k))
         self._Q = np.random.normal(size=(self._num_items, self._k))
@@ -34,6 +30,12 @@ class MatrixFactorization():
         self._b_Q = np.zeros(self._num_items)
         self._b = np.mean(self._R[np.where(self._R != 0)])
 
+    def fit(self):
+        """
+        training Matrix Factorization : Update matrix latent weight and bias
+        - global bias: mean rating value of R(train). It prevent minus output of rating prediction.
+        :return: training_process
+        """
         # train while epochs
         self._training_process = []
         for epoch in range(self._epochs):
@@ -135,6 +137,6 @@ if __name__ == "__main__":
     ])
 
     # P, Q is (7 X k), (k X 5) matrix
-    factorizer = MatrixFactorization(R, k=3, learning_rate=0.01, reg_param=0.01, epochs=300, verbose=True)
+    factorizer = MatrixFactorization(R, k=8, learning_rate=0.01, reg_param=0.01, epochs=300, verbose=True)
     factorizer.fit()
     factorizer.print_results()
