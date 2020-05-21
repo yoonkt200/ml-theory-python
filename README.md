@@ -23,6 +23,7 @@ The reason for the existence of each chapter is for study only.
     - optimizer
     - regularization
 * [3. Linear Algebra](https://github.com/yoonkt200/recommender-system/tree/master/03-linear-algebra)
+    - background knowledge
     - dimensionality reduction
     - matrix factorization
 * [4. Neural Network](https://github.com/yoonkt200/recommender-system/tree/master/04-neural-network)
@@ -32,7 +33,7 @@ The reason for the existence of each chapter is for study only.
         - logistic regression
         - fnn
     - **pending..**
-* [5. Recommender](https://github.com/yoonkt200/recommender-system/tree/master/05-recommender)
+* [5. Recommender (Appendix)](https://github.com/yoonkt200/recommender-system/tree/master/05-recommender)
     - Factorization Machine
     - Factorization Machine vector analysis
     - Wide and Deep
