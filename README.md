@@ -49,7 +49,7 @@ The reason for the existence of each chapter is for study only.
 #### Getting Started
 ```bash
 $ git clone https://github.com/yoonkt200/ml-theory-python.git
-$ (conda env) pip install -r requirements.txt
+$ set python path to `venv/` folder
 $ run ml-theory-python/{chapter-name}/{algorithm-name.py or .ipynb}/
 ```
 
