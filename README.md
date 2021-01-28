@@ -33,12 +33,14 @@ The reason for the existence of each chapter is for study only.
         - logistic regression
         - fnn
     - **pending..**
-* [5. Recommender (Appendix)](https://github.com/yoonkt200/recommender-system/tree/master/05-recommender)
+* [5. Recommender](https://github.com/yoonkt200/recommender-system/tree/master/05-recommender)
     - Factorization Machine
     - Factorization Machine vector analysis
     - Wide and Deep
     - **pending..**
-* [6. Clustering](https://github.com/yoonkt200/recommender-system/tree/master/06-clustering)
+* [6. MAB](https://github.com/yoonkt200/recommender-system/tree/master/06-mab)
+    - E-greedy
+    - Thompson Sampling
     - **pending..**
 
 
